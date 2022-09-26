@@ -3,7 +3,7 @@ const path = require("path");
 const transporter = require("./transpoter");
 
 const BroadCastMail = async ({ name, email }) => {
-  const requiredPath = path.join(__dirname, "../view/loginAlert.ejs");
+  const requiredPath = path.join(__dirname, "../view/dailyHunt.ejs");
 
   const data = await ejs.renderFile(requiredPath, {
     name: name,
@@ -12,7 +12,7 @@ const BroadCastMail = async ({ name, email }) => {
   var mainOptions = {
     from: '"Ritik Soni" ritiksingat7@gmail.com',
     to: email,
-    subject: "Daily ",
+    subject: "Daily Hunt",
     html: data,
   };
 

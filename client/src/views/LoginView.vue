@@ -39,6 +39,8 @@ export default {
           try {
             this.loading = false
             localStorage.setItem('userLoginStatus', true)
+            console.log(value.data.data[0].id)
+            localStorage.setItem('_id', value.data.data[0].id)
             this.$router.push('/')
             console.log('value', value)
           } catch (error) {

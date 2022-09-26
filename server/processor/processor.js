@@ -18,7 +18,7 @@ const newsLetterEmailQueue = new queue('newsLetterEmailQueue', {
 
 // use .process for any kind of logic that to perform over queue
 emailQueue.process(path.join(__dirname, 'emailQueueProcess.js'))
-newsLetterEmailQueue.process(path.join(__dirname, 'emailQueueProcess.js'))
+newsLetterEmailQueue.process(path.join(__dirname, 'newsLetterprocess.js'))
 
 //to check the progress of the on going jobs
 emailQueue.on('completed', (job) => {

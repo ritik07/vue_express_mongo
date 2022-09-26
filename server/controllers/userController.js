@@ -61,7 +61,7 @@ const sendNewsLetter = async () => {
       return users
     })
     allUsers.forEach((user, index) => {
-      newsLetterEmailQueue.add({ user }, { repeat: { cron: '39 12 * * *' }, jobId: uuidv4() }).then(() => {
+      newsLetterEmailQueue.add({ user }, { repeat: { cron: '1 17 * * *' }, jobId: uuidv4() }).then(() => {
         if (index + 1 === allUsers.length) {
           console.log('All users are added to cron queue')
         }

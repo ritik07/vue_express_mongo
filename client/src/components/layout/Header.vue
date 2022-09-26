@@ -2,7 +2,7 @@
   <div class="navbar">
     <div class="dis-flex justify-content-sb">
       <div class="logo">
-        Blogger
+        Bulk mailer
       </div>
       <div class="profile-avtr" v-show="this.$router.path !=='/login' ">
         <Avatar @click="logout" />
